@@ -1,0 +1,42 @@
+/* Container */
+.topup-container {
+  max-width: 500px;
+  margin: 80px auto;
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.topup-container h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Buttons */
+.topup-container button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2b6cff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.topup-container button:hover {
+  background: #1f4ed8;
+  transform: translateY(-2px);
+}
+
+/* Active click */
+.topup-container button:active {
+  transform: scale(0.98);
+}

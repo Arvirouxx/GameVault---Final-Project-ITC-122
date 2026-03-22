@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/images/icon.png">
+<title>About Us - GameVault</title>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "tWr6WZ-Y21JmqvaeQ",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_vevnv18', 'template_r0e7f3b', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+<style>
+  /* Consistent Clean White Theme */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    line-height: 1.8;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+  }
+
+  .about-container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+  }
+
+  .mission-statement {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 60px;
+  }
+
+  /* Founder Section */
+  .founder-section {
+    margin: 80px 0;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 40px;
+  }
+
+  .founder-image {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .founder-info h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #000;
+  }
+
+  .founder-info .title {
+    color: #888;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+    margin-top: 40px;
+  }
+
+  .grid-item h3 {
+    font-size: 1.4rem;
+    color: #000;
+    margin-bottom: 10px;
+    border-left: 4px solid #000;
+    padding-left: 15px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 60px 0;
+    color: #999;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    margin-top: 80px;
+  }
+  
+  /* Feedback Container Styling */
+.feedback-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.feedback-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #000;
+}
+
+/* Form Layout */
+.feedback-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-container label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Input & Textarea Styling */
+.feedback-container input, 
+.feedback-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+    transition: border-color 0.2s;
+}
+
+.feedback-container input:focus, 
+.feedback-container textarea:focus {
+    outline: none;
+    border-color: #000; /* Darker border when typing */
+}
+
+.feedback-container textarea {
+    height: 150px;
+    resize: vertical; /* Allows user to grow the box height only */
+}
+
+/* Submit Button */
+.btn {
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+
+  @media (max-width: 768px) {
+    .founder-section { flex-direction: column; text-align: center; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="images/icon.png" alt="GameVault Icon" class="nav-icon">
+    <link rel="stylesheet" href="style.css">
+    GameVault</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="cart.html">Cart</a></li>
+    <li><a href="about.html" style="color: #000;">About Us</a></li>
+  </ul>
+</nav>
+
+<div class="about-container">
+  <h1 class="hero-text">Gaming, Curated.</h1>
+  <p class="mission-statement">
+    Founded in 2026, GameVault was built on a simple premise: gamers deserve a platform that prioritizes speed, clarity, and the best titles of the decade.
+  </p>
+
+  <div class="founder-section">
+    <img src="../../images/ceo.jpg" alt="Arvin Jaye V. Mina" class="founder-image">
+    <div class="founder-info">
+      <span class="title">Founder & CEO</span>
+      <h2>Arvin Jaye V. Mina</h2>
+      <p>Arvin Jaye V. Mina founded GameVault with a vision to redefine the digital marketplace. With a background in software engineering and a passion for immersive storytelling, he leads our team in bridging the gap between independent creators and the global gaming community.</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="grid-item">
+      <h3>Our Vision</h3>
+      <p>We believe digital storefronts should stay out of the way. Our goal is to connect players with their next favorite adventure in three clicks or less.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Global Reach</h3>
+      <p>With servers in 14 countries, we ensure your downloads are fast, your payments are secure, and your library is always accessible.</p>
+    </div>
+    <div class="feedback-container">
+        <h2>Feedback Section</h2>
+        <form id="contact-form">
+            <input type="hidden" name="time" value="Mar 10 2025 08:46">
+            <label>Name</label>
+            <input type="text" name="name" required>
+            <label>Email</label>
+            <input type="email" name="email" required>
+            <label>Subject</label>
+            <input type="text" name="title" required>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <script type="text/javascript" src="feedback-script.js">
+    </script>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 GameVault. All rights reserved.
+</footer>
+
+</body>
+</html>

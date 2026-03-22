@@ -1,0 +1,162 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2b6cff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #2b6cff;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #2b6cff;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #2b6cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.button:hover {
+  background: #1f4ed8;
+}
+
+/* GAME PAGE */
+.game-page {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.game-page img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2b6cff;
+  margin: 10px 0;
+}
+
+.age {
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 60px;
+}
+
+/* Style for the logo container */
+nav .logo {
+    display: flex;
+    align-items: center; /* Centers the icon and text vertically */
+    gap: 10px;           /* Adds space between the icon and "GameVault" */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Style for the new icon */
+.nav-icon {
+    height: 30px;        /* Matches the height of your text */
+    width: auto;         /* Maintains aspect ratio */
+    object-fit: contain;
+}
+
+/* Ensure the nav bar stays clean */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}

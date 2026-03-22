@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arc Raiders - GameVault</title>
+<style>
+  /* Clean White Theme */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .game-header {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .game-header h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: -1px;
+  }
+
+  .main-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+
+  .game-meta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .button {
+    background: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: opacity 0.2s;
+  }
+
+  .button:hover {
+    opacity: 0.8;
+  }
+
+  .button.secondary {
+    background: #f0f0f0;
+    color: #333;
+  }
+
+  .tags {
+    margin-top: 15px;
+  }
+
+  .tag {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #eee;
+    margin-top: 60px;
+    color: #999;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">GameVault</div>
+  <ul>
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../../categories.html">Categories</a></li>
+    <li><a href="../../cart.html">Cart</a></li>
+    <li><a href="../../about.html">About Us</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="game-header">
+    <h2>Arc Raiders</h2>
+    <div class="tags">
+      <span class="tag">Online</span>
+    </div>
+  </div>
+
+  <img src="../../images/arcraiders.jpg" alt="acs" class="main-img">
+
+  <div class="game-meta">
+    <div class="info-section">
+      <h3>Game Info</h3>
+      <p>Team‑based extraction shooter against hostile forces.</p>
+      
+      <p><strong>Developer:</strong> Embark Studios</p>
+      <p><strong>Publisher:</strong> Embark Studios</p>
+    </div>
+
+    <div class="purchase-section">
+      <p class="price">$49.99</p>
+      <p><small><strong>Age Rating:</strong> ESRB M (17+)</small></p>
+      <button class="button" onclick="addToCart('Arc Raiders', 49.99, '../images/arcraiders.jpg')">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+  function addToCart(name, price, img) {
+  let user = JSON.parse(localStorage.getItem("user"));
+
+  if (!user) {
+    alert("Please login first!");
+    return;
+  }
+
+  if (!user.cart) {
+    user.cart = [];
+  }
+
+  user.cart.push({ name, price, img });
+
+  localStorage.setItem("user", JSON.stringify(user));
+
+  alert("Added to cart!");
+}
+</script>
+<footer>
+  &copy; 2026 GameVault. All rights reserved.
+</footer>
+
+</body>
+</html>

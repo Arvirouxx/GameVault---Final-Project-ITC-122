@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/images/icon.png">
+<link rel="stylesheet" href="topup.css">
+<title>About Us - GameVault</title>
+</head>
+<style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 12px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-icon {
+  width: 32px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul li {
+  font-size: 14px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+#currency {
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+#username {
+  font-weight: 500;
+}
+
+/* TITLE */
+h2 {
+  padding: 25px 30px 10px;
+  font-size: 24px;
+}
+
+/* LIBRARY LIST */
+#libraryList {
+  list-style: none;
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* GAME CARD */
+.library-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.library-item:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.library-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* GAME NAME */
+.library-item h3 {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* BUTTON */
+.library-item button {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: none;
+  background: #3498db;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.library-item button:hover {
+  background: #2980b9;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 15px;
+  background: #fff;
+  font-size: 13px;
+  color: #777;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+</style>
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="images/icon.png" alt="GameVault Icon" class="nav-icon">
+    <link rel="stylesheet" href="style.css">
+    GameVault</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="cart.html">Cart</a></li>
+    <li><a href="about.html" style="color: #000;">About Us</a></li>
+    <li><span id="currency">$0</span></li>
+    <li><span id="username">Guest</span></li>
+  </ul>
+</nav>
+
+<h2>Your Library</h2>
+<ul id="libraryList"></ul>
+    
+<script src="script.js"></script>
+<footer>
+  &copy; 2026 GameVault. All rights reserved.
+</footer>
+
+</body>
+</html>
